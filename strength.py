@@ -5,7 +5,8 @@ from random import randint
 
 class Strength(Exercise):
 
-    def __init__(self,duration=None, bodyGroup=None , reps=None, sets=None, type=None):
+    def __init__(self,duration=15, bodyGroup='Total Body' , reps=None, sets=None, exerciseType='Free Weight'):
+
         Exercise.__init__(self, duration, bodyGroup)
         if reps is None:
             self.reps = randint(6,12)
@@ -15,10 +16,7 @@ class Strength(Exercise):
             self.sets = randint(3,6)
         else:
             self.sets = sets
-        if type is None:
-            self.type = 'Free Weight'
-        else:
-            self.type = type
+        self.type = exerciseType
 
     def test(self):
         Exercise.test(self)

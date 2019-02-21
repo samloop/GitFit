@@ -3,15 +3,10 @@
 
 class Exercise:
 
-    def __init__(self, duration=None, bodyGroup=None):
-        if duration is None:
-            self.duration = 15
-        else:
+    def __init__(self, duration=15, bodyGroup='Total Body', intensity=2):
             self.duration = duration
-        if bodyGroup is None:
-            self.bodyGroup = 'Total Body'  #We should create a class for the different body group
-        else:
-            self.bodyGroup = bodyGroup
+            self.bodyGroup = bodyGroup # We should make a class for this
+            self.intensity = intensity
 
     def test(self):
         print("Exercise")
@@ -19,6 +14,8 @@ class Exercise:
         print(self.duration)
         print("Body Group")
         print(self.bodyGroup)
+        print("intensity")
+        print(self.intensity)
 
 
 #ex = Exercise(10, 'Arms')
