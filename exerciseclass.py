@@ -1,4 +1,4 @@
-# Class for cardio subclass of exercise
+# Class for exercise class subclass of exercise
 from exercise import Exercise
 from random import randint
 
