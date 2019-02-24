@@ -7,7 +7,7 @@ class Strength(Exercise):
 
     def __init__(self,duration=15, bodyGroup='Total Body' , reps=None, sets=None, exerciseType='Free Weight'):
 
-        Exercise.__init__(self, duration, bodyGroup)
+        super(Strength, self).__init__(duration, bodyGroup, 2, 'Strength')
         if reps is None:
             self.reps = randint(6,12)
         else:
@@ -17,6 +17,9 @@ class Strength(Exercise):
         else:
             self.sets = sets
         self.type = exerciseType
+
+    def __str__(self):
+        return 'Strength of type : ' + self.type + ' for duration of : ' + str(self.duration)
 
     def test(self):
         Exercise.test(self)

@@ -2,7 +2,7 @@
 
 class Person:
 
-    def __init__(self, gender="F", creditsTaken=0, major="CS", age=0, injury=False, enthusiasm=1, experience=1, goal="lose weight"):
+    def __init__(self, gender="F", creditsTaken=0, major="CS", age=0, injury=False, enthusiasm=1, experience=1, goal="health"):
         self.gender = gender    # do we need this variable?
         self.creditsTaken = creditsTaken    # do we need this variable?  
         self.major = major  # do we need this variable?
@@ -13,54 +13,53 @@ class Person:
         self.goal = goal    # needs a class
 
 # add testing interview functions
-    def interview_test1(self):
-    # gender = ...
-    # credits = ...
+#     def interview_test1(self):
+        # credits = ...
 
 # workout call from recommender to test
 
     def interview(self):
-        self.generateGender()
-        self.generateCredits()
-        self.generateMajor()
-        self.generateAge()
-        self.generateInjury()
-        self.generateEnthusiasm()
-        self.generateExperience()
+        # self.generateGender()
+        # self.generateCredits()
+        # self.generateMajor()
+        # self.generateAge()
+        # self.generateInjury()
+        # self.generateEnthusiasm()
+        # self.generateExperience()
         self.generateGoal()
 
     # method to generate attribute gender
     def generateGender(self):
-        gender = input("Please enter your gender (M or F): ")
-        return gender
+        self.gender = input("Please enter your gender (M or F): ")
+        return self.gender
 
     def generateCredits(self):
-        creditsTaken = input("Please enter your current # of credit hours: ")
-        return creditsTaken
+        self.creditsTaken = input("Please enter your current # of credit hours: ")
+        return self.creditsTaken
 
     def generateMajor(self):
-        major = input("Please enter your major: ")
-        return major
+        self.major = input("Please enter your major: ")
+        return self.major
 
     def generateAge(self):
-        age = input("Please enter your age: ")
-        return age
+        self.age = input("Please enter your age: ")
+        return self.age
 
     def generateInjury(self):
-        injury = input("Are you injured? True or False: ")
-        return injury
+        self.injury = input("Are you injured? True or False: ")
+        return self.injury
 
     def generateEnthusiasm(self):
-        enthusiasm = input("Please enter your level of enthusiasm about working out on a scale of 1 (low) to 3 (high): ")
-        return enthusiasm
+        self.enthusiasm = input("Please enter your level of enthusiasm about working out on a scale of 1 (low) to 3 (high): ")
+        return self.enthusiasm
 
     def generateExperience(self):
-        experience = input("Please enter your level of experience in working out on a scale of 1 (beginner) to 3 (expert): ")
-        return experience
+        self.experience = input("Please enter your level of experience in working out on a scale of 1 (beginner) to 3 (expert): ")
+        return self.experience
 
     def generateGoal(self):
-        goal = input("What is your workout goal? 1 (health), 2 (image), 3 (performance), 4 (weightlighting): ")
-        return goal
+        self.goal = input("What is your workout goal? 1 (health), 2 (image), 3 (performance), 4 (weightlighting): ")
+        return self.goal
 
     def test(self):
         print("Person")

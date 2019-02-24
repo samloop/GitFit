@@ -7,7 +7,7 @@ class ExerciseClass(Exercise):
 
     def __init__(self,duration=10, bodyGroup='Total Body', instructor='Unknown', classType='Spin Class'):
 
-        Exercise.__init__(self, duration, bodyGroup)
+        super(ExerciseClass, self).__init__(duration, bodyGroup)
         self.instructor = instructor
         self.type = classType
 

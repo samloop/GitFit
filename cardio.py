@@ -7,8 +7,12 @@ class Cardio(Exercise):
 
     def __init__(self,duration=10, bodyGroup='Total Body', cardioType='Treadmill'):
 
-        Exercise.__init__(self, duration, bodyGroup)
+        super(Cardio, self).__init__(duration, bodyGroup, 2, 'Cardio')
+
         self.type = cardioType
+
+    def __str__(self):
+        return 'Cardio of type : ' + self.type + ' for duration of : ' + str(self.duration)
 
     def test(self):
         Exercise.test(self)

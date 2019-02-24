@@ -3,10 +3,11 @@
 
 class Exercise:
 
-    def __init__(self, duration=15, bodyGroup='Total Body', intensity=2):
+    def __init__(self, duration=15, bodyGroup='Total Body', intensity=2, name='Generic'):
             self.duration = duration
             self.bodyGroup = bodyGroup # We should make a class for this
             self.intensity = intensity
+            self.name = name
 
     def test(self):
         print("Exercise")
