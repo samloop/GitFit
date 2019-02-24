@@ -12,37 +12,47 @@ class Person:
         self.experience = experience
         self.goal = goal    # needs a class
 
+    def interview(self):
+        self.generateGender()
+        self.generateCredits()
+        self.generateMajor()
+        self.generateAge()
+        self.generateInjury()
+        self.generateEnthusiasm()
+        self.generateExperience()
+        self.generateGoal()
+
     # method to generate attribute gender
-    def generateGender():
-        gender = input("Please enter your gender (M or F):")
+    def generateGender(self):
+        gender = input("Please enter your gender (M or F): ")
         return gender
 
-    def generateCredts():
-        creditsTaken = input("Please enter your current # of credit hours:")
+    def generateCredits(self):
+        creditsTaken = input("Please enter your current # of credit hours: ")
         return creditsTaken
 
-    def generateMajor():
-        major = input("Please enter your major:")
+    def generateMajor(self):
+        major = input("Please enter your major: ")
         return major
 
-    def generateAge():
-        age = input("Please enter your age:")
+    def generateAge(self):
+        age = input("Please enter your age: ")
         return age
 
-    def generateInjury():
-        injury = input("Are you injured? True or False:")
+    def generateInjury(self):
+        injury = input("Are you injured? True or False: ")
         return injury
 
-    def generateEnthusiasm():
-        enthusiasm = input("Please enter your level of enthusiasm about working out on a scale of 1 (low) to 3 (high):")
+    def generateEnthusiasm(self):
+        enthusiasm = input("Please enter your level of enthusiasm about working out on a scale of 1 (low) to 3 (high): ")
         return enthusiasm
 
-    def generateExperience():
-        experience = input("Please enter your level of experience in working out on a scale of 1 (beginner) to 3 (expert):")
+    def generateExperience(self):
+        experience = input("Please enter your level of experience in working out on a scale of 1 (beginner) to 3 (expert): ")
         return experience
 
-    def generateGoal():
-        goal = input("What is your workout goal?")
+    def generateGoal(self):
+        goal = input("What is your workout goal? 1 (health), 2 (image), 3 (performance), 4 (weightlighting): ")
         return goal
 
     def test(self):
