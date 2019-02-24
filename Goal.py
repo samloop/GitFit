@@ -4,8 +4,6 @@ class Goal:
     STARTED = 'Started'
     COMPLETED = 'Completed'
 
-
-
     def __init__(self):
         self.state = Goal.PLANNED
-        self.execution_plan = None
+        self.execution_plan = []

@@ -24,6 +24,9 @@ class WorkoutRecommender:
         elif p1.goal == '4':
             self.goal = WeightBasedGoal()
 
+        # READY TO OUTPUT THE GOAL'S EXECUTION PLAN in nice format
+
+
 
 def main():
     wr = WorkoutRecommender()

@@ -12,6 +12,13 @@ class Person:
         self.experience = experience
         self.goal = goal    # needs a class
 
+# add testing interview functions
+    def interview_test1(self):
+    # gender = ...
+    # credits = ...
+
+# workout call from recommender to test
+
     def interview(self):
         self.generateGender()
         self.generateCredits()
