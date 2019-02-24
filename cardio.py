@@ -12,7 +12,7 @@ class Cardio(Exercise):
         self.type = cardioType
 
     def __str__(self):
-        return 'Cardio of type : ' + self.type + ' for duration of : ' + str(self.duration)
+        return 'Cardio of type : ' + self.type + ' for ' + str(self.duration) + ' minutes.'
 
     def test(self):
         Exercise.test(self)

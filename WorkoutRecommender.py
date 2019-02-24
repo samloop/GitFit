@@ -29,7 +29,7 @@ class WorkoutRecommender:
             self.goal = WeightBasedGoal()
 
         # READY TO OUTPUT THE GOAL'S EXECUTION PLAN in nice format
-        for ex in p1.goal.execution_plan:
+        for ex in self.goal.execution_plan:
             print(ex)
 
 
