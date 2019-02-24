@@ -1,12 +1,9 @@
 from HealthBasedGoal import HealthBasedGoal
 from ImageBasedGoal import ImageBasedGoal
 from WeightBasedGoal import WeightBasedGoal
+from PerformanceBasedGoal import PerformanceBasedGoal
 from person import Person
 from Goal import Goal
-
-
-class PerformanceBasedGoal(object):
-    pass
 
 
 class WorkoutRecommender:
