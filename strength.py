@@ -19,7 +19,7 @@ class Strength(Exercise):
         self.type = exerciseType
 
     def __str__(self):
-        return 'Strength of type : ' + self.type + ' for ' + str(self.duration) + ' minutes, or ' + str(self.sets) + ' sets with ' + str(self.reps) + ' reps per set.'
+        return 'Strength of type : ' + self.type + ', ' + str(self.sets) + ' sets with ' + str(self.reps) + ' reps per set.'
 
     def test(self):
         Exercise.test(self)
