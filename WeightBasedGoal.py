@@ -7,5 +7,5 @@ class WeightBasedGoal(Goal):
 
     def __init__(self):
         super(WeightBasedGoal, self).__init__()
-        self.execution_plan.extend([Cardio(cardioType='Elliptical')])
+        self.execution_plan.extend([Strength(bodyGroup='Total Body')])
         return

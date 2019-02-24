@@ -2,6 +2,7 @@ from HealthBasedGoal import HealthBasedGoal
 from ImageBasedGoal import ImageBasedGoal
 from WeightBasedGoal import WeightBasedGoal
 from PerformanceBasedGoal import PerformanceBasedGoal
+from exerciseclass import ExerciseClass
 from person import Person
 from Goal import Goal
 
@@ -15,7 +16,10 @@ class WorkoutRecommender:
     def start(self):
         p1 = Person()
         p1.interview()
-        if p1.goal == '1':
+
+        if p1.enthusiasm == '1':
+            self.goal.execution_plan.append(ExerciseClass(bodyGroup='Total Body'))
+        elif p1.goal == '1':
             self.goal = HealthBasedGoal()
         elif p1.goal == '2':
             self.goal = ImageBasedGoal()
@@ -25,7 +29,7 @@ class WorkoutRecommender:
             self.goal = WeightBasedGoal()
 
         # READY TO OUTPUT THE GOAL'S EXECUTION PLAN in nice format
-        for ex in self.goal.execution_plan:
+        for ex in p1.goal.execution_plan:
             print(ex)
 
 

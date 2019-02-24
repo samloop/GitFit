@@ -24,8 +24,8 @@ class Person:
         # self.generateMajor()
         # self.generateAge()
         # self.generateInjury()
-        # self.generateEnthusiasm()
-        # self.generateExperience()
+        self.generateEnthusiasm()
+        self.generateExperience()
         self.generateGoal()
 
     # method to generate attribute gender
