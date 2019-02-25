@@ -4,8 +4,6 @@ from WeightBasedGoal import WeightBasedGoal
 from PerformanceBasedGoal import PerformanceBasedGoal
 from LowGoal import LowGoal
 from person import Person
-from Goal import Goal
-
 
 class WorkoutRecommender:
 
