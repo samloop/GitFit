@@ -13,7 +13,7 @@ class Strength(Exercise):
         else:
             self.reps = reps
         if sets is None:
-            self.sets = randint(3,6)
+            self.sets = randint(2,4)
         else:
             self.sets = sets
         self.type = exerciseType
