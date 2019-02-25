@@ -3,20 +3,14 @@
 class Person:
 
     def __init__(self, gender="F", creditsTaken=0, major="CS", age=0, injury=False, enthusiasm=1, experience=1, goal="health"):
-        self.gender = gender    # do we need this variable?
-        self.creditsTaken = creditsTaken    # do we need this variable?  
-        self.major = major  # do we need this variable?
-        self.age = age  # do we need this variable?
+        self.gender = gender
+        self.creditsTaken = creditsTaken
+        self.major = major
+        self.age = age
         self.injury = injury
         self.enthusiasm = enthusiasm
         self.experience = experience
-        self.goal = goal    # needs a class
-
-# add testing interview functions
-#     def interview_test1(self):
-        # credits = ...
-
-# workout call from recommender to test
+        self.goal = goal
 
     def interview(self):
         # self.generateGender()
@@ -80,9 +74,5 @@ class Person:
         print("goal")
         print(self.goal)
 
-    # in an ideal world, we have a builder class of some sort that calls this with all of the logic. is that correct?
-    # def createPlan():
 
-    # same with this method
-    # def refreshPlan():
 

@@ -17,7 +17,7 @@ class ExerciseClass(Exercise):
         elif num == 3:
             self.type = 'Yoga Class'
         elif num == 4:
-            self.type = 'HIIT Class (ex. Orange Theory'
+            self.type = 'HIIT Class (ex. Orange Theory)'
 
     def __str__(self):
         return 'Exercise class of type : ' + self.type + ' for : ' + self.bodyGroup + ' for ' + str(self.duration) + ' minutes'
