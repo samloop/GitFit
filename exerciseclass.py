@@ -5,11 +5,19 @@ from random import randint
 
 class ExerciseClass(Exercise):
 
-    def __init__(self,duration=60, bodyGroup='Total Body', instructor='Unknown', classType='Spin Class'):
+    def __init__(self,duration=60, bodyGroup='Total Body', instructor='Unknown'):
 
-        super(ExerciseClass, self).__init__(duration, bodyGroup, instructor, 'Aerobic Dance Class')
+        super(ExerciseClass, self).__init__(duration, bodyGroup, instructor)
         self.instructor = instructor
-        self.type = classType
+        num = randint(1,4)
+        if num == 1:
+            self.type = 'Spin Class'
+        elif num == 2:
+            self.type = 'Zumba Class'
+        elif num == 3:
+            self.type = 'Yoga Class'
+        elif num == 4:
+            self.type = 'HIIT Class (ex. Orange Theory'
 
     def __str__(self):
         return 'Exercise class of type : ' + self.type + ' for : ' + self.bodyGroup + ' for ' + str(self.duration) + ' minutes'

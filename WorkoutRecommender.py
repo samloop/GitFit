@@ -2,7 +2,7 @@ from HealthBasedGoal import HealthBasedGoal
 from ImageBasedGoal import ImageBasedGoal
 from WeightBasedGoal import WeightBasedGoal
 from PerformanceBasedGoal import PerformanceBasedGoal
-from exerciseclass import ExerciseClass
+from LowGoal import LowGoal
 from person import Person
 from Goal import Goal
 
@@ -17,9 +17,9 @@ class WorkoutRecommender:
         p1 = Person()
         p1.interview()
 
-        if p1.goal == '1':
-            self.goal = HealthBasedGoal()
-        elif p1.goal == '1' and p1.enthusiasm == '1':
+        if p1.enthusiasm == '1' or p1.experience == '1':
+            self.goal = LowGoal()
+        elif p1.goal == '1':
             self.goal = HealthBasedGoal()
         elif p1.goal == '2':
             self.goal = ImageBasedGoal()
