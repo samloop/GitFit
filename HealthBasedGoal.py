@@ -17,5 +17,5 @@ class HealthBasedGoal(Goal):
         elif num == 3:
             self.execution_plan.extend([Cardio(cardioType='Bike'), Strength(exerciseType='Bicep Curls')])
         elif num == 4:
-            self.execution_plan.extend(ExerciseClass(bodyGroup='Total Body'))
+            self.execution_plan.extend([ExerciseClass(bodyGroup='Total Body')])
         return
