@@ -17,9 +17,7 @@ class WorkoutRecommender:
         p1 = Person()
         p1.interview()
 
-        if p1.enthusiasm == '1':
-            self.goal.execution_plan.append(ExerciseClass(bodyGroup='Total Body'))
-        elif p1.goal == '1':
+        if p1.goal == '1' and p1.enthusiasm == '1':
             self.goal = HealthBasedGoal()
         elif p1.goal == '2':
             self.goal = ImageBasedGoal()
