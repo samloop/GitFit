@@ -3,6 +3,7 @@
 class Person:
 
     def __init__(self, gender="F", creditsTaken=0, major="CS", age=0, injury=False, enthusiasm=1, experience=1, goal="health"):
+        print("In person class")
         self.gender = gender
         self.creditsTaken = creditsTaken
         self.major = major
