@@ -5,9 +5,14 @@ from random import randint
 
 class Stretch(Exercise):
 
-    def __init__(self,duration=10, bodyGroup='Total Body'):
+    def __init__(self,duration=10, bodyGroup='Total Body', name='downward dog'):
+        print("Stretch class is called")
 
-        Exercise.__init__(self, duration, bodyGroup)
+        super(Stretch, self).__init__(duration, bodyGroup, name)
+        self.name = name
+
+    def __str__(self):
+        return 'Stretch of type : ' + self.name
 
     def test(self):
         Exercise.test(self)

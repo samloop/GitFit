@@ -22,8 +22,6 @@ class WorkoutRecommender:
         elif p1.goal == '2':
             self.goal = ImageBasedGoal()
         elif p1.goal == '3':
-            self.goal = PerformanceBasedGoal()
-        elif p1.goal == '4':
             self.goal = WeightBasedGoal()
 
         # READY TO OUTPUT THE GOAL'S EXECUTION PLAN in nice format

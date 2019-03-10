@@ -1,4 +1,4 @@
-# Class for stregnth subclass of exercise
+# Class for strength subclass of exercise
 from exercise import Exercise
 from random import randint
 
@@ -6,6 +6,7 @@ from random import randint
 class Strength(Exercise):
 
     def __init__(self,duration=15, bodyGroup='Total Body' , reps=None, sets=None, exerciseType='Free Weight'):
+        print("Strength class is called")
 
         super(Strength, self).__init__(duration, bodyGroup, 2, 'Strength')
         if reps is None:

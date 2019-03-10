@@ -6,6 +6,7 @@ from random import randint
 class Cardio(Exercise):
 
     def __init__(self,duration=10, bodyGroup='Total Body', cardioType='Treadmill'):
+        print("Cardio class is called")
 
         super(Cardio, self).__init__(duration, bodyGroup, 2, 'Cardio')
 

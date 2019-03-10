@@ -7,6 +7,7 @@ class ExerciseClass(Exercise):
 
     def __init__(self,duration=60, bodyGroup='Total Body', instructor='Unknown'):
 
+        print("ExerciseClass class called")
         super(ExerciseClass, self).__init__(duration, bodyGroup, instructor)
         self.instructor = instructor
         num = randint(1,4)

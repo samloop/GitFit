@@ -52,7 +52,7 @@ class Person:
         return self.experience
 
     def generateGoal(self):
-        self.goal = input("What is your workout goal? 1 (health), 2 (image), 3 (performance), 4 (weightlifting): ")
+        self.goal = input("What is your workout goal? 1 (health / cardio), 2 (image / full body toning), 3 (strength / weightlifting): ")
         return self.goal
 
     def test(self):
