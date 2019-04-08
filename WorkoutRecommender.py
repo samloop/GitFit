@@ -50,7 +50,10 @@ class WorkoutRecommender:
                                 ex.sets += 1
                                 ex.reps = randint(6,8)
                         elif isinstance(ex, Cardio):
-                            ex.duration += 10
+                            if ex.type == 'Treadmill':
+                                ex.duration += 10
+                            else:
+                                ex.type = 'Treadmill'
                         elif isinstance(ex, ExerciseClass):
                             num = randint(1,3)
                             if num == 1:
