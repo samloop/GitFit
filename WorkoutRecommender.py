@@ -36,37 +36,50 @@ class WorkoutRecommender:
         workoutNum = 2
         while True:
             opinion = input("Was that workout easy(1), ok(2), hard(3) or would you like to quit(4)")
-
-            if opinion == '1':
-                for ex in self.goal.execution_plan:
-                    if isinstance(ex, Strength):
-                        if ex.reps < 10:
-                            ex.reps += 2
-                        else:
-                            ex.sets += 1
-                            ex.reps = randint(6,8)
-                    elif isinstance(ex, Cardio):
-                        ex.duration += 10
-                    elif isinstance(ex, ExerciseClass):
-                        num = randint(1,3)
-                        if num == 1:
-                            ex.duration += 15
-                        if num == 2:
-                            if p1.goal == '1':
-                                self.goal = HealthBasedGoal()
-                            elif p1.goal == '2':
-                                self.goal = ImageBasedGoal()
-                            elif p1.goal == '3':
-                                self.goal = WeightBasedGoal()
-                        else:
-                            self.goal = LowGoal()
-
-            #elif opinion == '2':
-
-            #elif opinion =='3':
-
-            else:
+            if int(opinion) > 3:
                 exit()
+            adjust = input("Do you want to adjust the current plan(1) or create a new one(2)?")
+
+            if adjust == '1':
+                if opinion == '1':
+                    for ex in self.goal.execution_plan:
+                        if isinstance(ex, Strength):
+                            if ex.reps < 10:
+                                ex.reps += 2
+                            else:
+                                ex.sets += 1
+                                ex.reps = randint(6,8)
+                        elif isinstance(ex, Cardio):
+                            ex.duration += 10
+                        elif isinstance(ex, ExerciseClass):
+                            num = randint(1,3)
+                            if num == 1:
+                                ex.duration += 15
+                            if num == 2:
+                                if p1.goal == '1':
+                                    self.goal = HealthBasedGoal()
+                                elif p1.goal == '2':
+                                    self.goal = ImageBasedGoal()
+                                elif p1.goal == '3':
+                                    self.goal = WeightBasedGoal()
+                            else:
+                                self.goal = LowGoal()
+
+                #elif opinion == '2':
+
+                #elif opinion =='3':
+
+            elif adjust == '2':
+                p1.interview()
+                if p1.enthusiasm == '1' or p1.experience == '1':
+                    self.goal = LowGoal()
+                elif p1.goal == '1':
+                    self.goal = HealthBasedGoal()
+                elif p1.goal == '2':
+                    self.goal = ImageBasedGoal()
+                elif p1.goal == '3':
+                    self.goal = WeightBasedGoal()
+
             print("Workout " + str(workoutNum))
             workoutNum += 1
             for ex in self.goal.execution_plan:
