@@ -29,7 +29,7 @@ class WorkoutRecommender:
             self.goal = WeightBasedGoal()
 
         # READY TO OUTPUT THE GOAL'S EXECUTION PLAN in nice format
-        print("Workout 1")
+        print("WORKOUT 1")
         for ex in self.goal.execution_plan:
             print(ex)
 
@@ -64,10 +64,32 @@ class WorkoutRecommender:
                                     self.goal = WeightBasedGoal()
                             else:
                                 self.goal = LowGoal()
-
-                #elif opinion == '2':
-
-                #elif opinion =='3':
+                elif opinion == '2':
+                    for ex in self.goal.execution_plan:
+                        if isinstance(ex, Strength):
+                            if ex.reps < 12:
+                                ex.reps += 1
+                            else:
+                                ex.sets += 1
+                                ex.reps = randint(6,8)
+                        elif isinstance(ex, Cardio):
+                            ex.duration += 5
+                elif opinion == '3':
+                    for ex in self.goal.execution_plan:
+                        if isinstance(ex, Strength):
+                            if ex.reps > 6:
+                                ex.reps -= 1
+                            else:
+                                ex.sets -= 1
+                                ex.reps = randint(8,12)
+                        elif isinstance(ex, Cardio):
+                            ex.duration -= 10
+                        elif isinstance(ex, ExerciseClass):
+                            num = randint(1,2)
+                            if num == 1:
+                                ex.duration -= 15
+                            else:
+                                self.goal = LowGoal()
 
             elif adjust == '2':
                 p1.interview()
@@ -80,7 +102,7 @@ class WorkoutRecommender:
                 elif p1.goal == '3':
                     self.goal = WeightBasedGoal()
 
-            print("Workout " + str(workoutNum))
+            print("WORKOUT " + str(workoutNum))
             workoutNum += 1
             for ex in self.goal.execution_plan:
                 print(ex)
