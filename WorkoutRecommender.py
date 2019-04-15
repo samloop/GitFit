@@ -1,7 +1,6 @@
 from HealthBasedGoal import HealthBasedGoal
 from ImageBasedGoal import ImageBasedGoal
 from WeightBasedGoal import WeightBasedGoal
-from PerformanceBasedGoal import PerformanceBasedGoal
 from LowGoal import LowGoal
 from person import Person
 from strength import Strength
