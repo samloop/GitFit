@@ -42,6 +42,7 @@ class WorkoutRecommender:
 
             if adjust == '1':
                 if opinion == '1':
+                    print("The workout will be harder by increasing reps/sets")
                     for ex in self.goal.execution_plan:
                         if isinstance(ex, Strength):
                             if ex.reps < 10:
@@ -68,6 +69,7 @@ class WorkoutRecommender:
                             else:
                                 self.goal = LowGoal()
                 elif opinion == '2':
+                    print("The workout will be similar by slightly increasing reps/sets")
                     for ex in self.goal.execution_plan:
                         if isinstance(ex, Strength):
                             if ex.reps < 12:
@@ -78,6 +80,7 @@ class WorkoutRecommender:
                         elif isinstance(ex, Cardio):
                             ex.duration += 5
                 elif opinion == '3':
+                    print("The workout will be easier by slightly decreasing reps/sets")
                     for ex in self.goal.execution_plan:
                         if isinstance(ex, Strength):
                             if ex.reps > 6:
@@ -95,6 +98,7 @@ class WorkoutRecommender:
                                 self.goal = LowGoal()
 
             elif adjust == '2':
+                print("A new workout will be made")
                 p1.interview()
                 if p1.enthusiasm == '1' or p1.experience == '1':
                     self.goal = LowGoal()
