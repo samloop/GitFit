@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0565234f-eb50-4152-97a7-e4f4b2afbb3e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/altitude.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/environment.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/health.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mentalHealth.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/physicalHealth.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/temperature.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeightBasedGoal.py" beforeDir="false" afterPath="$PROJECT_DIR$/WeightBasedGoal.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WorkoutRecommender.py" beforeDir="false" afterPath="$PROJECT_DIR$/WorkoutRecommender.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/person.py" beforeDir="false" afterPath="$PROJECT_DIR$/person.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,38 +13,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/health.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/physicalHealth.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mentalHealth.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/WorkoutRecommender.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="98">
-              <caret line="134" column="72" selection-start-line="134" selection-start-column="72" selection-end-line="134" selection-end-column="72" />
+            <state relative-caret-position="272">
+              <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
               <folding>
                 <element signature="e#0#43#0" expanded="true" />
               </folding>
@@ -213,18 +180,18 @@
     <frame x="68" y="16" width="1320" height="824" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24941543" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24941543" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.72798127" visible="true" weight="0.32658958" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.72798127" weight="0.32658958" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49805143" weight="0.32658958" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49805143" visible="true" weight="0.32658958" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.2720187" side_tool="true" weight="0.32803467" />
       <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -369,8 +336,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/WorkoutRecommender.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
-          <caret line="134" column="72" selection-start-line="134" selection-start-column="72" selection-end-line="134" selection-end-column="72" />
+        <state relative-caret-position="272">
+          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
           <folding>
             <element signature="e#0#43#0" expanded="true" />
           </folding>

@@ -1,7 +1,6 @@
 from HealthBasedGoal import HealthBasedGoal
 from ImageBasedGoal import ImageBasedGoal
 from WeightBasedGoal import WeightBasedGoal
-from PerformanceBasedGoal import PerformanceBasedGoal
 from LowGoal import LowGoal
 from person import Person
 from strength import Strength
@@ -36,7 +35,7 @@ class WorkoutRecommender:
             self.goal = WeightBasedGoal()
 
         # READY TO OUTPUT THE GOAL'S EXECUTION PLAN in nice format
-        print("Workout 1")
+        print("WORKOUT 1")
         for ex in self.goal.execution_plan:
             print(ex)
 
@@ -49,6 +48,7 @@ class WorkoutRecommender:
 
             if adjust == '1':
                 if opinion == '1':
+                    print("The workout will be harder by increasing reps/sets")
                     for ex in self.goal.execution_plan:
                         if isinstance(ex, Strength):
                             if ex.reps < 10:
@@ -57,7 +57,10 @@ class WorkoutRecommender:
                                 ex.sets += 1
                                 ex.reps = randint(6,8)
                         elif isinstance(ex, Cardio):
-                            ex.duration += 10
+                            if ex.type == 'Treadmill':
+                                ex.duration += 10
+                            else:
+                                ex.type = 'Treadmill'
                         elif isinstance(ex, ExerciseClass):
                             num = randint(1,3)
                             if num == 1:
@@ -71,12 +74,37 @@ class WorkoutRecommender:
                                     self.goal = WeightBasedGoal()
                             else:
                                 self.goal = LowGoal()
-
-                #elif opinion == '2':
-
-                #elif opinion =='3':
+                elif opinion == '2':
+                    print("The workout will be similar by slightly increasing reps/sets")
+                    for ex in self.goal.execution_plan:
+                        if isinstance(ex, Strength):
+                            if ex.reps < 12:
+                                ex.reps += 1
+                            else:
+                                ex.sets += 1
+                                ex.reps = randint(6,8)
+                        elif isinstance(ex, Cardio):
+                            ex.duration += 5
+                elif opinion == '3':
+                    print("The workout will be easier by slightly decreasing reps/sets")
+                    for ex in self.goal.execution_plan:
+                        if isinstance(ex, Strength):
+                            if ex.reps > 6:
+                                ex.reps -= 1
+                            else:
+                                ex.sets -= 1
+                                ex.reps = randint(8,12)
+                        elif isinstance(ex, Cardio):
+                            ex.duration -= 10
+                        elif isinstance(ex, ExerciseClass):
+                            num = randint(1,2)
+                            if num == 1:
+                                ex.duration -= 15
+                            else:
+                                self.goal = LowGoal()
 
             elif adjust == '2':
+                print("A new workout will be made")
                 p1.interview()
                 if p1.enthusiasm == '1' or p1.experience == '1':
                     self.goal = LowGoal()
@@ -134,12 +162,10 @@ class WorkoutRecommender:
                         ex.duration -= 5
                         print("Workout shortened for the sake of time.")
 
-            print("Workout " + str(workoutNum))
+            print("WORKOUT " + str(workoutNum))
             workoutNum += 1
             for ex in self.goal.execution_plan:
                 print(ex)
-
-
 
 
 def main():
