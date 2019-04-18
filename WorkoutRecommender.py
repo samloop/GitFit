@@ -22,6 +22,15 @@ class WorkoutRecommender:
     def start(self):
         p1 = Person()
         p1.interview()
+        ph1 = PhysicalHealth()
+        mh1 = MentalHealth()
+        injury = ph1.generateInjury()
+        t1 = Temperature()
+        t1 = t1.getTemp(zip)
+        pr1 = Altitude()
+        pr1 = pr1.getPressure(zip)
+        stress = mh1.generateStress()
+        sick = ph1.generateSick()
         strength = False
 
         if p1.enthusiasm == '1' or p1.experience == '1':
@@ -37,6 +46,45 @@ class WorkoutRecommender:
         # READY TO OUTPUT THE GOAL'S EXECUTION PLAN in nice format
         print("WORKOUT 1")
         for ex in self.goal.execution_plan:
+            # environment adjustment
+            # temperature
+            if t1 >= 80:
+                ex.duration -= 3
+                print("Because of the heat, your workout was shortened to ", ex.duration, " minutes")
+            elif t1 <= 50:
+                print("Because of the low temperature of ", t1,
+                      " degrees, you should do a 5 minute warm-up jog.")
+            else:
+                print("Temperature outside is ", t1, ". Enjoy your workout!")
+
+            # altitude
+            if pr1 >= 1843:
+                if ex.duration >= 15:
+                    ex.duration -= 5
+                    print("The air is thinner, affecting physical performance. Workout has been "
+                          "shortened to ", ex.duration, " minutes")
+            else:
+                print("Atmospheric pressure of ", pr1, " hPA shouldn't affect workout.")
+
+            # health adjustment
+            if injury == '2':
+                if strength:
+                    print("If you are injured, use low weights or no weights at all "
+                          "- use resistance bands and bodyweight instead.")
+                else:
+                    print("Given your injury, if anything feels hurt during your workout, "
+                          "stop what you're doing and RICE it.")
+            if sick == '2':
+                print("If you feel sick with above the neck, you can workout as usual, just monitor "
+                      "how you feel. If you feel sick below the neck, take today as a rest day!")
+            if (stress == '2') | (stress == '3'):
+                if strength:
+                    print(
+                        "Consider doing a superset so your workout takes less time (no rest between exercises.)")
+                else:
+                    if ex.duration >= 15:
+                        ex.duration -= 5
+                        print("Workout shortened to account for stress.")
             print(ex)
 
         workoutNum = 2
@@ -114,53 +162,6 @@ class WorkoutRecommender:
                     self.goal = ImageBasedGoal()
                 elif p1.goal == '3':
                     self.goal = WeightBasedGoal()
-
-                    # environment adjustment
-                    # temperature
-                    t1 = Temperature()
-                    t1 = t1.getTemp(zip)
-                    if t1 >= 80:
-                        ex.duration -= 5
-                        print("Because of the heat, your workout was shortened to ", ex.duration, " minutes")
-                    elif t1 <= 50:
-                        print("Because of the low temperature of ", t1,
-                              " degrees, you should do a 5 minute warm-up jog.")
-                    else:
-                        print("Temperature outside is ", t1, ". Enjoy your workout!")
-
-            # altitude
-            p1 = Altitude()
-            p1 = p1.getPressure(zip)
-            if p1 >= 1843:
-                if ex.duration >= 15:
-                    ex.duration -= 5
-                    print("The air is thinner, affecting physical performance. Workout has been "
-                          "shortened to ", ex.duration, " minutes")
-            else:
-                print("Atmospheric pressure of ", p1, " hPA shouldn't affect workout.")
-
-            # health adjustment
-            ph1 = PhysicalHealth()
-            mh1 = MentalHealth()
-            if ph1.generateInjury() == 2:
-                if strength:
-                    print("If you are injured, use low weights or no weights at all "
-                          "- use resistance bands and bodyweight instead.")
-                else:
-                    print("Given your injury, if anything feels hurt during your workout, "
-                          "stop what you're doing and RICE it.")
-            if ph1.generateSick() == 2:
-                print("If you feel sick with above the neck, you can workout as usual, just monitor "
-                      "how you feel. If you feel sick below the neck, take today as a rest day!")
-            stress = mh1.generateStress()
-            if (stress == 2) | (stress == 3):
-                if strength:
-                    print(
-                        "Consider doing a superset so your workout takes less time (no rest between exercises.)")
-                else:
-                    if ex.duration >= 15:
-                        ex.duration -= 5
-                        print("Workout shortened for the sake of time.")
 
             print("WORKOUT " + str(workoutNum))
             workoutNum += 1

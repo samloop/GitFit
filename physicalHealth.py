@@ -11,5 +11,5 @@ class PhysicalHealth(Health):
         return self.injury
 
     def generateSick(self):
-        self.sick = input("Are you sick? (1) No, (2) Yes")
+        self.sick = input("Are you sick? (1) No, (2) Yes: ")
         return self.sick
