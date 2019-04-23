@@ -4,4 +4,4 @@ class Workoutlog:
 
     def writeLog(self):
         f = open(datetime. datetime. today()+".txt", "w+")
-        f.write("running workourreccomender")
+        f.write("running workoutrecommender")
